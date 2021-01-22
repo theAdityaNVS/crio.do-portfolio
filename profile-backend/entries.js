@@ -7,6 +7,7 @@ db.defaults({ entries: [] }).write()
 
 function putEntry(entry) {
 // TODO: store it locally
+    db.get('entries').push(entry).write()
 }
 
 function getEntries() {
